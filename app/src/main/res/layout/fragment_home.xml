@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <Button
+        android:id="@+id/syncButton"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:text="Sync"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_temp_env"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="50dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tempSlider"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3" />
+
+    <TextView
+        android:id="@+id/text_hum_env"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="25dp"
+
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="50dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tempSlider"
+        app:layout_constraintStart_toStartOf="@+id/guideline3" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/tempSlider"
+        android:layout_width="fill_parent"
+        android:layout_height="6dp"
+        android:layout_marginTop="400dp"
+        android:stepSize="0.1"
+        android:valueFrom="20.0"
+        android:valueTo="30.0"
+        app:labelBehavior="floating"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Switch
+        android:id="@+id/switchOnOff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="left"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+
+        android:switchPadding="16dp"
+        android:text="Switch"
+        android:textOff="No"
+        android:textOn="Yes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/syncButton" />
+
+    <TextView
+        android:id="@+id/text_set_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/tempSlider"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="307dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="203dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
